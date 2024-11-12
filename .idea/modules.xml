@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/exemplo-vetor/exemplo-vetor.iml" filepath="$PROJECT_DIR$/exemplo-vetor/exemplo-vetor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exer-vector-1/exer-vector-1.iml" filepath="$PROJECT_DIR$/exer-vector-1/exer-vector-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exerc-alturas-vetor/exerc-alturas-vetor.iml" filepath="$PROJECT_DIR$/exerc-alturas-vetor/exerc-alturas-vetor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exerc-list/exerc-list.iml" filepath="$PROJECT_DIR$/exerc-list/exerc-list.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio-fixacao/exercicio-fixacao.iml" filepath="$PROJECT_DIR$/exercicio-fixacao/exercicio-fixacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio-vetor-fix/exercicio-vetor-fix.iml" filepath="$PROJECT_DIR$/exercicio-vetor-fix/exercicio-vetor-fix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio1/exercicio1.iml" filepath="$PROJECT_DIR$/exercicio1/exercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio2/exercicio2.iml" filepath="$PROJECT_DIR$/exercicio2/exercicio2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio3/exercicio3.iml" filepath="$PROJECT_DIR$/exercicio3/exercicio3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matriz/matriz.iml" filepath="$PROJECT_DIR$/matriz/matriz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poo-curse.iml" filepath="$PROJECT_DIR$/poo-curse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vetor-dois/vetor-dois.iml" filepath="$PROJECT_DIR$/vetor-dois/vetor-dois.iml" />
+    </modules>
+  </component>
+</project>

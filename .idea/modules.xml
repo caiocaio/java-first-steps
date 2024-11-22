@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/composicao/composicao.iml" filepath="$PROJECT_DIR$/composicao/composicao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composicao-2/composicao-2.iml" filepath="$PROJECT_DIR$/composicao-2/composicao-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enum-01/enum-01.iml" filepath="$PROJECT_DIR$/enum-01/enum-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/exemplo-vetor/exemplo-vetor.iml" filepath="$PROJECT_DIR$/exemplo-vetor/exemplo-vetor.iml" />
       <module fileurl="file://$PROJECT_DIR$/exer-vector-1/exer-vector-1.iml" filepath="$PROJECT_DIR$/exer-vector-1/exer-vector-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/exerc-alturas-vetor/exerc-alturas-vetor.iml" filepath="$PROJECT_DIR$/exerc-alturas-vetor/exerc-alturas-vetor.iml" />

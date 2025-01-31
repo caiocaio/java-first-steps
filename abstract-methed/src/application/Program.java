@@ -15,7 +15,7 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the number of shapes");
+        System.out.print("Enter the number of shapes");
         int n = sc.nextInt();
 
         List <Shape> list = new ArrayList<>();
@@ -39,13 +39,12 @@ public class Program {
                 list.add(new Circle(color, radius));
             }
 
-            System.out.println();
-            System.out.println("Shape areas:");
-            for (Shape shape : list){
-                System.out.println(shape.area());
-                System.out.println(String.format("%.2f", shape.area()));
             }
-
+        System.out.println();
+        System.out.println("Shape areas:");
+        for (Shape shape : list){
+            System.out.println(shape.area());
+            System.out.println(String.format("%.2f", shape.area()));
         }
     }
 }

@@ -42,10 +42,15 @@ public class Program {
         System.out.println();
         System.out.println("Taxes Paid: ");
         for (Pessoa pessoa : list){
-            System.out.println(pessoa.getNome() + " $ " + pessoa.calcularImpostoPago());
+            System.out.println(pessoa.getNome() + ": $ " + pessoa.calcularImpostoPago());
         }
 
         System.out.println();
+        System.out.println("Total Taxes: ");
+        double soma = 0.0;
+        for (Pessoa pessoa : list){
+            soma += pessoa.calcularImpostoPago();
+        }
 
     }
 }

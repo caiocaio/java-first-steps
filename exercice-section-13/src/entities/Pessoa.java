@@ -2,12 +2,10 @@ package entities;
 
 public abstract class Pessoa {
     private String nome;
-    protected Double rendaAnual;
+    protected double rendaAnual;
+    protected Double impostoPago;
 
-    public Pessoa() {
-    }
-
-    public Pessoa(String nome, Double rendaAnual) {
+    public Pessoa(String nome, double rendaAnual) {
         this.nome = nome;
         this.rendaAnual = rendaAnual;
     }
@@ -16,16 +14,7 @@ public abstract class Pessoa {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public abstract Double calcularImpostoPago();
 
-    public Double getRendaAnual() {
-        return rendaAnual;
-    }
-
-    public void setRendaAnual(Double rendaAnual) {
-        this.rendaAnual = rendaAnual;
-    }
 
 }

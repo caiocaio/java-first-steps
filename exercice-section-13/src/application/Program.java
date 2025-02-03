@@ -20,8 +20,8 @@ public class Program {
 
         List<Pessoa> list = new ArrayList<>();
 
-        for (int i = 1; i < n ; i++) {
-            System.out.println("Tax payer #" + i + "data:");
+        for (int i = 0; i < n ; i++) {
+            System.out.println("Tax payer #" + n + " data:");
             System.out.print("Individual or Company? (i/c)");
             char ch = sc.next().charAt(0);
             System.out.print("Name: ");
@@ -33,7 +33,7 @@ public class Program {
                 double gastosSaude = sc.nextDouble();
                 list.add(new PessoaFisica(nome, rendaAnual, gastosSaude));
             }else {
-                System.out.print("Number of employess");
+                System.out.print("Number of employess: ");
                 int numeroFunc = sc.nextInt();
                 list.add(new PessoaJuridica(nome, rendaAnual, numeroFunc));
             }
@@ -42,8 +42,10 @@ public class Program {
         System.out.println();
         System.out.println("Taxes Paid: ");
         for (Pessoa pessoa : list){
-            System.out.println(pessoa.getNome() + " $ ");
+            System.out.println(pessoa.getNome() + " $ " + pessoa.calcularImpostoPago());
         }
+
+        System.out.println();
 
     }
 }

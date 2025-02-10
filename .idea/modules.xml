@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/abstract-class-1/abstract-class-1.iml" filepath="$PROJECT_DIR$/abstract-class-1/abstract-class-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/abstract-methed/abstract-methed.iml" filepath="$PROJECT_DIR$/abstract-methed/abstract-methed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class-155-read-file-1/class-155-read-file-1.iml" filepath="$PROJECT_DIR$/class-155-read-file-1/class-155-read-file-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class-156-reader-and-buffered/class-156-reader-and-buffered.iml" filepath="$PROJECT_DIR$/class-156-reader-and-buffered/class-156-reader-and-buffered.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class-157-try-resources/class-157-try-resources.iml" filepath="$PROJECT_DIR$/class-157-try-resources/class-157-try-resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class-158-writers/class-158-writers.iml" filepath="$PROJECT_DIR$/class-158-writers/class-158-writers.iml" />
       <module fileurl="file://$PROJECT_DIR$/composicao/composicao.iml" filepath="$PROJECT_DIR$/composicao/composicao.iml" />
       <module fileurl="file://$PROJECT_DIR$/composicao-2/composicao-2.iml" filepath="$PROJECT_DIR$/composicao-2/composicao-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/enum-01/enum-01.iml" filepath="$PROJECT_DIR$/enum-01/enum-01.iml" />

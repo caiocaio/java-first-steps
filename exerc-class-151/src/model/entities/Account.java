@@ -5,17 +5,17 @@ import model.exceptions.DomainExceptions;
 public class Account {
     private Integer number;
     private String holder;
-    private Double initialBalance;
+    private Double balance;
     private Double withdrawlimit;
 
 
     public Account() {
     }
 
-    public Account(Integer number, String holder, Double initialBalance, Double withdrawlimit) {
+    public Account(Integer number, String holder, Double balance, Double withdrawlimit) {
         this.number = number;
         this.holder = holder;
-        this.initialBalance = initialBalance;
+        this.balance = balance;
         this.withdrawlimit = withdrawlimit;
     }
 
@@ -27,12 +27,12 @@ public class Account {
         this.holder = holder;
     }
 
-    public Double getInitialBalance() {
-        return initialBalance;
+    public Double getBalance() {
+        return balance;
     }
 
-    public void setInitialBalance(Double initialBalance) {
-        this.initialBalance = initialBalance;
+    public void setBalance(Double balance) {
+        this.balance = balance;
     }
 
     public Double getWithdrawlimit() {
@@ -43,15 +43,23 @@ public class Account {
         this.withdrawlimit = withdrawlimit;
     }
 
-    public void withdraw(double amount){
-        if (amount <= initialBalance) {
-           throw new DomainExceptions("The amount exceeds inicial balance");
-        }
+
+    public void deposit(Double amount) {
+        balance += balance;
+    }
+
+    public void withdraw(Double amount) {
+        validateWithdraw(amount);
+        balance -= amount;
+    }
+
+    private void validateWithdraw(double amount){
         if (amount > withdrawlimit) {
             throw new DomainExceptions("The amount exceed withdrow limit");
         }
-
+        if (amount > balance) {
+           throw new DomainExceptions("The amount exceeds inicial balance");
+        }
     }
-
 
 }

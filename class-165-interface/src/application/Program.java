@@ -1,10 +1,12 @@
 package application;
 
-import entities.Rental;
+import model.entities.Car;
+import model.entities.Rental;
+import model.service.BrazilTaxService;
+import model.service.RentalService;
 
-import java.sql.SQLOutput;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -12,33 +14,31 @@ public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:ss");
+        DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
         System.out.println("Enter Rental Data:");
-        System.out.println();
+        System.out.print("Car Model: ");
+        String carModel = sc.nextLine();
+        System.out.print("Pickup (dd/MM/yyyy HH:mm): ");
+        LocalDateTime start = LocalDateTime.parse(sc.nextLine(), sdf);
+        System.out.print("Return (dd/MM/yyyy HH:mm): ");
+        LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), sdf);
 
-        try {
-            System.out.print("Car Model: ");
-            String carModel = sc.nextLine();
-            System.out.print("Pickup (dd/MM/yyyy hh:ss): ");
-            Date pickupDate = sdf.parse(sc.next());
-            System.out.print("Return (dd/MM/yyyy hh:ss): ");
-            Date returnDate = sdf.parse(sc.next());
-            System.out.print("Enter price per hour: ");
-            Double pricePerHour = sc.nextDouble();
-            System.out.print("Enter price for days: ");
-            Double priceForDays = sc.nextDouble();
+        Rental cr = new Rental(new Car(carModel), finish, start);
 
-            Rental rental = new Rental(carModel, pickupDate, returnDate, pricePerHour, priceForDays);
+        System.out.print("Enter price per hour: ");
+        Double pricePerHour = sc.nextDouble();
+        System.out.print("Enter price for days: ");
+        Double priceForDays = sc.nextDouble();
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        RentalService rentalService = new RentalService(pricePerHour, priceForDays, new BrazilTaxService());
 
-        System.out.println("INVOICE: ");
-        System.out.println("Basic payment: ");
-        System.out.println("Tax: ");
-        System.out.println("Total payment: ");
+        rentalService.processeInvoice(cr);
+
+        System.out.println("Invoice: ");
+        System.out.println("Total: " + cr.getInvoice().getBasicPayment());
+        System.out.println("Tax: " + cr.getInvoice().getTax());
+        System.out.println("Total + Tax" + cr.getInvoice().getTotalPayment());
 
     }
 }

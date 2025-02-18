@@ -24,21 +24,21 @@ public class Program {
         System.out.print("Return (dd/MM/yyyy HH:mm): ");
         LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), sdf);
 
-        Rental cr = new Rental(new Car(carModel), finish, start);
+        Rental cr = new Rental(new Car(carModel), start , finish);
 
         System.out.print("Enter price per hour: ");
         Double pricePerHour = sc.nextDouble();
         System.out.print("Enter price for days: ");
-        Double priceForDays = sc.nextDouble();
+        Double pricePerDays = sc.nextDouble();
 
-        RentalService rentalService = new RentalService(pricePerHour, priceForDays, new BrazilTaxService());
+        RentalService rentalService = new RentalService(pricePerHour, pricePerDays, new BrazilTaxService());
 
         rentalService.processeInvoice(cr);
 
         System.out.println("Invoice: ");
-        System.out.println("Total: " + cr.getInvoice().getBasicPayment());
+        System.out.println("Basic Payment: " + cr.getInvoice().getBasicPayment());
         System.out.println("Tax: " + cr.getInvoice().getTax());
-        System.out.println("Total + Tax" + cr.getInvoice().getTotalPayment());
+        System.out.println("Total Payment " + cr.getInvoice().getTotalPayment());
 
     }
 }

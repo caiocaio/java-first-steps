@@ -1,6 +1,5 @@
 package model.entities;
 
-import model.service.BrazilTaxService;
 
 import java.time.LocalDateTime;
 
@@ -13,10 +12,10 @@ public class Rental {
 
     private Car car;
 
-    public Rental(Car car, LocalDateTime finish, LocalDateTime start) {
+    public Rental(Car car, LocalDateTime start, LocalDateTime finish) {
         this.car = car;
-        this.finish = finish;
         this.start = start;
+        this.finish = finish;
     }
 
 

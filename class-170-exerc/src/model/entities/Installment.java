@@ -5,18 +5,14 @@ import java.time.format.DateTimeFormatter;
 
 public class Installment {
 
-    private LocalDate date;
+    private LocalDate dueDate;
     private Double amount;
 
 
     private static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public Installment() {
-
-    }
-
-    public Installment(LocalDate date, Double amount) {
-        this.date = date;
+    public Installment(LocalDate dueDate, Double amount) {
+        this.dueDate = dueDate;
         this.amount = amount;
     }
 
@@ -28,16 +24,16 @@ public class Installment {
         this.amount = amount;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getDueDate() {
+        return dueDate;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
     @Override
     public String toString() {
-        return date.format(dtf) + " - " + String.format("%.2f", amount );
+        return dueDate.format(dtf) + " - " + String.format("%.2f", amount );
     }
 }
